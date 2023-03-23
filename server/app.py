@@ -4,11 +4,12 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
+# this route works
 @app.route('/')
 def index():
     return '<h1>Python Operations with Flask Routing and Views</h1>'
 
+# the rest of the routes do not work on view
 @app.route('/print/<string:route>')
 def print_string(route):
     print(route)
